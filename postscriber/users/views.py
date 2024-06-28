@@ -17,3 +17,9 @@ def sign_up(request):
         'form': form
     }
     return render(request, 'users/sign_up.html', context)
+
+#login_required
+def logout(request):
+    if request.method == 'POST' or request.method == 'GET':
+        logout(request)
+        return render(request, 'users/logout.html')
